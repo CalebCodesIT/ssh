@@ -1,0 +1,19 @@
+#!/bin/bash
+clear
+
+#HOME="/home/caleb"
+SSH="$HOME/.ssh"
+
+chmod 700 $SSH
+chmod 600 $SSH/id* $SSH/authorized_keys $SSH/google*
+chmod 644 $SSH/*.pub $SSH/google*.pub $SSH/known_hosts
+chmod og-rwx $HOME $SSH/*.md $SSH/sav $SSH/kgen $SSH/fix-perms
+
+chmod og-rwx $SSH/*.log
+chmod u+rw $SSH/*.log
+chmod u-x $SSH/*.log
+
+# -----------------------------------------
+# chmod 644 ~/.ssh/authorized_keys
+# chmod 644 ~/.ssh/known_hosts
+# chmod 644 ~/.ssh/config
