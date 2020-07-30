@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export REPOS=/g/dev/calebcodesit/repos
+
+cd $REPOS/ssh
+ssh-agent bash -c 'ssh-add /g/dev/calebcodesit/.ssh/id_rsa; git push origin master'
